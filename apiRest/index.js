@@ -19,16 +19,16 @@ app.use(express.urlencoded({ extended: true }));
 
 app.post('/insertar_con_rest', async (req, res) => {
     try {
-        const { nomUsuario, perfil, activo } = req.body;
+        const { nombreUsuario, perfil, activo } = req.body;
         console.log(req.body)
         const [rows] = await pool.query(
-            "INSERT INTO perfiles(nomUsuario, perfil, activo) VALUES (?, ?, ?)",
-            [nomUsuario, perfil, activo]
+            "INSERT INTO perfiles(nombreUsuario, perfil, activo) VALUES (?, ?, ?)",
+            [nombreUsuario, perfil, activo]
         );
         res.json({
             msg: 'Insertado correctamente',
             id: rows.insertId,
-            nomUsuario,
+            nombreUsuario,
             perfil,
             activo
         });

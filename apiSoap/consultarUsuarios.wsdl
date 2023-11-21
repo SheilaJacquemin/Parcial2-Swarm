@@ -9,7 +9,7 @@
 
     <message name="Usuario">
         <part name="id" type="xsd:int"/>
-        <part name="nomUsuario" type="xsd:string"/>
+        <part name="nombreUsuario" type="xsd:string"/>
         <part name="perfil" type="xsd:string"/>
         <part name="activo" type="xsd:boolean"/>
     </message>
